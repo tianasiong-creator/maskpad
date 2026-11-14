@@ -69,11 +69,11 @@ jobs:
         run: |
           scripts/package-unsigned-ipa.sh
           scripts/verify-release.sh
-          - name: Upload IPA
-            uses: actions/upload-artifact@v4
-            with:
-             name: MaskPad-unsigned
-             path: "**/*.ipa"
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: MaskPad-unsigned
+          path: "**/*.ipa"
   simulator-tests:
     name: ROM-free Simulator UI
     runs-on: macos-15
